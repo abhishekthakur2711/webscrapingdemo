@@ -14,14 +14,15 @@ import time
 chrome_options = webdriver.ChromeOptions()
 prefs = {"profile.default_content_setting_values.notifications" : 2}
 chrome_options.add_experimental_option("prefs",prefs)
+#chrome_options.add_argument("--headless")  
 driver = webdriver.Chrome(options=chrome_options)
 
 #Opening the Website to crawl
 driver.get("https://www.flipkart.com/")
 
 #defining credentials
-usernameStr = '9900952361'
-passwordStr = '124500'
+usernameStr = '<Enter Username Here>'
+passwordStr = '<Enter Password Here>'
 #defining object to scrape for - can be a list and looped for multiple object
 searchStr = 'Power Banks'
 
