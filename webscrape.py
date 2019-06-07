@@ -11,18 +11,18 @@ import re
 import time
 
 #Initializing the Webdriver
-chrome_options = webdriver.ChromeOptions()
-prefs = {"profile.default_content_setting_values.notifications" : 2}
-chrome_options.add_experimental_option("prefs",prefs)
-#chrome_options.add_argument("--headless")  
+chrome_options = webdriver.ChromeOptions()#creating object of ChromeOptions Class
+prefs = {"profile.default_content_setting_values.notifications" : 2}#disables notifications showing up
+chrome_options.add_experimental_option("prefs",prefs)#disables notifications showing up
+chrome_options.add_argument("--headless")  #starting chrome in in background
 driver = webdriver.Chrome(options=chrome_options)
 
 #Opening the Website to crawl
 driver.get("https://www.flipkart.com/")
 
 #defining credentials
-usernameStr = '<Enter Username Here>'
-passwordStr = '<Enter Password Here>'
+usernameStr = 'Enter Username'
+passwordStr = 'Enter password'
 #defining object to scrape for - can be a list and looped for multiple object
 searchStr = 'Power Banks'
 
